@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        
+        .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .column,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div style="text-align:center">
+            <h2>Registration Platform</h2>
+        </div>
+        <div class="row">
+            <div class="column">
+                <form action="/getdata" method="POST">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="country">Region</label>
+                    <select id="country" name="Region">
+          <option value="Angamaly">Angamaly</option>
+          <option value="Kalady">Kalady</option>
+          <option value="Perambavoor">Perumbavoor</option>
+          <option value="Adimali">Adimali</option>
+          <option value="Mattoor">Mattoor</option>
+        </select>
+                    <label for="fname">Vehicle Number</label>
+                    <input type="text" id="fname" name="Number" placeholder="Type the vehicle number">
+                    <label for="fname">Vehicle Chasis Number</label>
+                    <input type="text" id="fname" name="Chasis" placeholder="Type the vehicle Charses number">
+                    <label for="fname">Re-Registration Date</label>
+                    <input type="text" id="fname" name="Re-Registration" placeholder="Type the vehicle  Re-registratioin Date">
+                    <label for="fname">Vehicle Location Link</label>
+                    <input type="text" id="link" name="Link" placeholder="VehLink">
+                    <label for="subject">Vehicle Description</label>
+                    <textarea id="subject" name="Description" placeholder="Write something.." style="height:170px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
