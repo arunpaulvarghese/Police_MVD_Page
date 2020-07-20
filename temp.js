@@ -20,7 +20,6 @@ app.get('/', function(req, res) {
 
 });
 
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -28,7 +27,6 @@ app.use(upload.array());
 app.use(express.static('public'));
 
 /////// 
-
 
 app.post('/auth', function(req, res) {
     var username = req.body.username;
@@ -42,9 +40,6 @@ app.post('/auth', function(req, res) {
         res.render('404');
     }
 });
-
-
-
 
 app.post('/getdata', function(req, res) {
     console.log(req.body);
